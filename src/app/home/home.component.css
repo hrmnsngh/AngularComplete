@@ -25,5 +25,15 @@ li a:hover{
 
 .flex-container{
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
+
+}
+
+.flex-container > div{
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+}
+.footer{
+    text-align: center;
 }

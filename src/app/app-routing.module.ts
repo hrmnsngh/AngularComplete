@@ -5,7 +5,8 @@ import { PageNotFoundComponent } from '../app/page-not-found/page-not-found.comp
 
 @NgModule({
     imports:[
-        RouterModule.forRoot([        {path: 'home', component: HomeComponent},
+        RouterModule.forRoot([       
+        {path: 'home', component: HomeComponent},
         {path: '', redirectTo: 'home', pathMatch: 'full'},
         {path: '**', component: PageNotFoundComponent}])
     ],

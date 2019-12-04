@@ -1,0 +1,12 @@
+<h2>Child Component</h2>
+
+<div ng-if="parentData != undefined">
+    Parent Data:  
+    {{parentData}}
+</div>
+
+<form (ngSubmit)="submitForm()">
+<input type="text" [(ngModel)]="name" name="name">
+<input type="number" [(ngModel)]="age" name="age" placeholder="Age in years">
+<button type="submit">Submit</button>
+</form>

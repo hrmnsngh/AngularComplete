@@ -13,3 +13,25 @@
     <div>Login/Signup</div>
     <div>Cart</div>
 </div>
+<form [formGroup]="homeForm" (ngSubmit)="onSubmit(homeForm.value)">
+  <div>
+    <label for="name">Name : </label>
+    <input type="text" formControlName="name">
+  </div>
+  
+  <div>
+    <label for="password">Password : </label>
+    <input type="password" formControlName="password">
+  </div>
+  <button type="submit">Login</button>
+</form>
+<div ng-if="homeData!= undefined">
+  <app-child [parentData]="homeForm" (dataEmitter)="updateData($event)">
+    
+  </app-child>
+
+</div>
+
+<div>
+  Name : {{name}} Age : {{age}}
+</div>
